@@ -440,6 +440,51 @@ textarea.contact-input~.icon {
    opacity: 0.8;
 }
 
+.loader {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 10;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.spiner {
+   display: inline-block;
+   width: 80px;
+   height: 80px;
+}
+
+.spiner:after {
+   content: " ";
+   display: block;
+   width: 64px;
+   height: 64px;
+   margin: 8px;
+   border-radius: 50%;
+   border: 6px solid #fff;
+   border-color: #fff transparent #fff transparent;
+   animation: animate 1.2s linear infinite;
+}
+
+.hidden {
+   display: none !important;
+}
+
+@keyframes animate {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
 @media only screen and (max-width: 1000px) {
    .logo {
       margin-right: 1rem;

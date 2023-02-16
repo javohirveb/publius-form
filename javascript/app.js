@@ -1,6 +1,11 @@
 const inputs = document.querySelectorAll(".contact-input")
 const toggleBtn = document.querySelector('.theme-toggle')
 const allElements = document.querySelectorAll('*')
+const loader = document.getElementById('loader')
+
+setInterval(() => {
+   loader.classList.add('hidden')
+}, 5000)
 
 toggleBtn.addEventListener('click', () => {
    document.body.classList.toggle('dark')
